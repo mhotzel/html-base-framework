@@ -1,0 +1,197 @@
+<!DOCTYPE html>
+<html lang="de">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dorfladen Rahmen</title>
+    <link rel="stylesheet" href="css/colorscheme-bankon.css">
+    <link rel="stylesheet" href="css/style.css">
+</head>
+
+<body>
+    <div id="app">
+        <header>
+            <div class="logo-container">
+                <img src="img/dlslogo.png" alt="Dorfladen Schlichten Logo">
+            </div>
+
+            <div class="header-title">
+                DORFLADEN SCHLICHTEN
+            </div>
+        </header>
+
+        <!-- die Action Bar -->
+
+        <div class="action-bar">
+            <div class="action-left">
+                <span class="badge">Sitzung: Aktiv</span>
+            </div>
+
+            <div class="action-right">
+                <button class="btn btn-primary">Anmelden / Abmelden</button>
+            </div>
+        </div>
+
+        <!-- der Hauptinhalt -->
+
+        <div id="content-wrapper">
+            <nav>
+                <ul>
+                    <li><a href="#" class="active">Startseite</a></li>
+                    <li><a href="#">Benutzer</a></li>
+                    <li><a href="#">Daten</a></li>
+                </ul>
+            </nav>
+
+            <main>
+                <div>
+                    <h1>Willkommen</h1>
+                </div>
+                <!-- Statusboxen
+                    Weitere Status: info, warning, error -->
+
+                <div class="status-box info">
+                    <p>Ein Text in der Statusbox INFO</p>
+                </div>
+                <div id="content">
+                    <!-- Hier den Content hinein! START -->
+
+                    <!-- eine Section; Wie eine Card, nur ohne Rahmen. Alle Card-Sub-Classes sollten auch darin funktionieren! -->
+                    <div class="section">
+                        <p>Ich bin in einer Section, aber ohne Einrückung</p>
+                    </div>
+                    <div class="section section-content">
+                        <p>Ich bin in einer Section, aber mit Einrückung und viel Text, um die Breite auszutesten.
+                            Lorem ipsum dolor sit amet consectetur adipisicing elit. Reprehenderit quasi, temporibus</p>
+                    </div>
+
+                    <!-- Eine Karte mit Kopf und Fuß -->
+                    <div class="card card-small">
+                        <header class="card-header">Titel der Box wie in PICO CSS</header>
+                        <div class="card-content">
+                            <p>Hier steht der eigentliche Inhalt. Du kannst hier Text, Bilder oder Formulare einfügen.
+                            </p>
+                        </div>
+                        <footer class="card-footer">Zusatzinfos oder Buttons</footer>
+                    </div>
+                    <div class="card card-small">
+                        <header class="card-header">Eine schmale Card</header>
+                        <div class="card-content">
+                            <p>Hier steht der eigentliche Inhalt. Schmal.
+                            </p>
+                        </div>
+                        <footer class="card-footer">Zusatzinfos oder Buttons</footer>
+                    </div>
+                    <div class="card card-center">
+                        <header class="card-header">Eine schmale Card, zentriert</header>
+                        <div class="card-content">
+                            <p>Hier steht der eigentliche Inhalt. Zentriert.
+                            </p>
+                        </div>
+                        <footer class="card-footer">Zusatzinfos oder Buttons</footer>
+                    </div>
+                    <div class="card-grid">
+                        <div class="card">
+                            <header class="card-header">Karte 1 in einem Flex-Grid</header>
+                            <div class="card-content">
+                                <p>Karte 1 in einem Flex-Grid. Beide Karten stapeln sich, wenn das Fenster zu schmal
+                                    wird</p>
+                            </div>
+                            <footer class="card-footer">Bin der Fuß</footer>
+                        </div>
+                        <div class="card">
+                            <header class="card-header">Karte 2 in einem Flex-Grid</header>
+                            <div class="card-content">
+                                <p>Karte 2 in einem Flex-Grid</p>
+                            </div>
+                            <footer class="card-footer">Bin der Fuß</footer>
+                        </div>
+                    </div>
+                    <!-- Formulartest -->
+                    <div class="card">
+                        <header class=" card-header">Neue Datenerfassung</header>
+                        <div class="card-content">
+                            <form>
+                                <div class="form-row">
+                                    <!-- mittels form-row können mehrere form-group Elemente in einer Zeile nebeneinander positioniert werden -->
+                                    <div class="form-group">
+                                        <label for="produkt">Produktname</label>
+                                        <input type="text" id="produkt" placeholder="z. B. Äpfel Schlichten">
+                                    </div>
+
+                                    <div class="form-group">
+                                        <label for="menge">Menge (kg)</label>
+                                        <input type="number" id="menge" placeholder="0.00">
+                                    </div>
+                                </div>
+                                <div class="form-group">
+                                    <label for="kategorie">Kategorie</label>
+                                    <select id="kategorie" class="full-width">
+                                        <option value="obst">Obst & Gemüse</option>
+                                        <option value="molkerei">Molkereiprodukte</option>
+                                        <option value="getraenke">Getränke</option>
+                                    </select>
+                                </div>
+                                <button type="submit" class="btn btn-submit btn-primary  full-width">Primär
+                                    (Speichern)</button>
+                            </form>
+                        </div>
+                    </div>
+                    <!-- Tabellendesign -->
+
+                    <div class="card">
+                        <header class="card-header">Aktuelle Bestandsliste</header>
+                        <div class="card-content">
+                            <div class="table-wrapper">
+                                <table>
+                                    <thead>
+                                        <tr>
+                                            <th>Produkt</th>
+                                            <th>Kategorie</th>
+                                            <th>Menge</th>
+                                            <th>Preis</th>
+                                            <th>Status</th>
+                                            <th>Aktion</th>
+                                        </tr>
+                                    </thead>
+                                    <tbody>
+                                        <tr>
+                                            <td>Äpfel (Schlichten)</td>
+                                            <td>Obst</td>
+                                            <td class="col-number">12 kg</td>
+                                            <td class="col-number"><span>3,45 EUR</span></td>
+                                            <!-- das SPAN-Tag hier sorgt zusammen mit 'col-number dafür, dass die Zahlen rechtsbündig in der Tabelle angezeigt werden. -->
+                                            <td><span class="status-tag info">Lagernd</span></td>
+                                            <td><button class="btn btn-secondary"
+                                                    style="padding: 5px 10px; font-size: 0.8rem;">Edit</button></td>
+                                        </tr>
+                                        <tr>
+                                            <td>Vollmilch 3,5%</td>
+                                            <td>Molkerei</td>
+                                            <td class="col-number">5 Stk.</td>
+                                            <td class="col-number"><span>13,45 EUR</span></td>
+                                            <td><span class="status-tag warning">Niedrig</span></td>
+                                            <td><button class="btn btn-outline"
+                                                    style="padding: 5px 10px; font-size: 0.8rem;">Edit</button>
+                                                <!-- Wichtig: Die Klasse 'btn-submit' sorgt dafür, dass ein Button über die gesamte Breite reicht -->
+                                            </td>
+                                        </tr>
+                                    </tbody>
+                                </table>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- Hier den Content hinein! ENDE -->
+                </div>
+            </main>
+        </div>
+        <footer>
+            <p><strong>Status:</strong>&nbsp;
+                <?= $status ?>
+            </p>
+        </footer>
+    </div>
+</body>
+
+</html>

@@ -1,0 +1,63 @@
+/* ==========================================================================
+   0. FARB-VARIABLEN (BANKON KI-CONSULTING PALETTE)
+   ========================================================================== */
+:root {
+    /* --- BRAND CORE --- */
+    --primary-color: #003056;
+    /* Deep Bankon Navy (Vertrauen & Stabilität) */
+    --primary-rgb: 0, 48, 86;
+    /* Für Glas-Effekte/Schatten */
+    --primary-hover: #001f38;
+
+    --secondary-color: #00a3e0;
+    /* Bankon Cyan (KI & Digitale Transformation) */
+    --secondary-hover: #0081b3;
+    --primary-light-hover: #e6f4fa;
+    /* Sehr helles Blau für Tabellen-Hover */
+
+    /* --- BACKGROUNDS & SURFACES --- */
+    --bg-app: #ffffff;
+    --bg-sidebar: #f4f7f9;
+    /* Kühle, professionelle Sidebar */
+    --bg-nav-item: #e9eff3;
+    --bg-nav-hover: #dbe5ed;
+    --bg-action-bar: #f4f7f9;
+    --bg-card-header: #f0f4f7;
+    --bg-table-even: #fafbfc;
+    --bg-secondary-hover: #cedce4;
+    /* Hover für graue Buttons */
+
+    /* --- TYPOGRAPHY (Professional Slate) --- */
+    --text-main: #333333;
+    /* Standard Text */
+    --text-dark: #001a2f;
+    /* Überschriften / Kontrast */
+    --text-muted: #667885;
+    /* Nebentexte */
+    --text-label: #4a5a66;
+    /* Formular-Labels */
+    --text-light: #8e9ca7;
+    /* Footnote-Texte */
+    --text-white: #ffffff;
+
+    /* --- BORDERS --- */
+    --border-color: #d1d9e0;
+    --border-subtle: #e1e8ed;
+    --border-table: #eef2f5;
+
+    /* --- STATUS (KI-MODERN) --- */
+    --info-color: #00a3e0;
+    /* Cyan für Info */
+    --info-bg: #e6f6fd;
+    --info-text: #00567a;
+
+    --warning-color: #f7a600;
+    /* Business Gold/Orange */
+    --warning-bg: #fff8e6;
+    --warning-text: #8a5d00;
+
+    --error-color: #e30613;
+    /* Klarer Warn-Rotton */
+    --error-bg: #fde6e7;
+    --error-text: #a0040d;
+}
