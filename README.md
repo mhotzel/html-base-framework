@@ -58,6 +58,8 @@ Wir unterscheiden zwischen dem großen Formular-Button und Aktions-Buttons:
 - `.btn-secondary` (Grau)
 - `.btn-outline` (Weiß mit grünem Rand)
 
+- Sollen mehrere Buttons nebeneinander in einer Zeile sein und die gleiche Breite haben: `.button-row`
+
 - **C. Status-Meldungen (.status-box)**
 
 Für Rückmeldungen an den Nutzer:
