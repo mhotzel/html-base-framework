@@ -584,4 +584,12 @@ tbody tr:hover {
     .action-left {
         display: none;
     }
+
+    th {
+        padding: 5px 7px;
+    }
+
+    td {
+        padding: 5px 7px;
+    }
 }
