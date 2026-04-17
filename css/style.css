@@ -529,6 +529,11 @@ tbody tr:hover {
     color: var(--error-color);
 }
 
+.status-tag.outline {
+    background: var(--outline-bg);
+    color: var(--outline-color);
+}
+
 /* ==========================================================================
    7. RESPONSIVES DESIGN (SMARTPHONE)
    ========================================================================== */
