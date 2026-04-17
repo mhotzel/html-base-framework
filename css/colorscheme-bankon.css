@@ -60,4 +60,8 @@
     /* Klarer Warn-Rotton */
     --error-bg: #fde6e7;
     --error-text: #a0040d;
+
+    --outline-color: white;
+    --outline-bg: #00a3e0;
+    --outline-text: white;
 }
