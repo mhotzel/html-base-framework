@@ -372,6 +372,47 @@ textarea {
     border-radius: 4px;
 }
 
+
+/* Stellt Input-Elemente mit einem Button in einer Zeile nebeneinander dar */
+.input-group {
+    display: flex;
+    gap: 10px; 
+    align-items: flex-end; /* Richtet Felder und Button an der Unterkante aus, falls Labels variieren */
+    width: 100%;
+}
+
+.input-group select, 
+.input-group input[type="text"], 
+.input-group input[type="password"],
+.input-group input[type="number"] {
+    flex: 1; /* Alle diese Felder nehmen den verfügbaren Platz ein */
+    min-width: 0; /* Verhindert, dass Inputs in Flex-Containern überlaufen */
+}
+
+.input-group .btn {
+    white-space: nowrap;
+    flex-shrink: 0; /* Verhindert, dass der Button zusammengedrückt wird */
+}
+
+/*
+Beispiel - HTML:
+<div class="form-group">
+    <label for="pw">Passwort</label>
+    <div class="input-group">
+        <input type="password" id="pw" placeholder="Passwort eingeben...">
+        <button type="button" class="btn btn-outline">Anzeigen</button>
+    </div>
+</div>
+
+<div class="form-group">
+    <label for="user">Benutzername</label>
+    <div class="input-group">
+        <input type="text" id="user" placeholder="z.B. Max Mustermann">
+        <button type="button" class="btn btn-primary">Prüfen</button>
+    </div>
+</div>
+*/
+
 /* Der breite Submit-Button */
 .btn-submit {
     background-color: var(--primary-color);
