@@ -32,11 +32,13 @@ Um Informationen sauber zu gruppieren (wie in Pico.css), nutzt du dieses Muster:
 Die Klasse `section` funktioniert analog zu `card`, aber ohne Rahmen.
 Die Klasse `section-content` rückt den Inhalt ein wie in `card`.
 
+```html
 <div class="section">
     <header class="card-header">Überschrift</header>
     <div class="card-content">Dein Inhalt hier...</div>
     <footer class="card-footer">Optionale Fußzeile</footer>
 </div>
+```
 
 Mittels `card-grid` können `card`-Elemente in eine Flexbox gepackt werden, um sie horizontal nebeneinander zu platzieren.
 Wird die Breite zu schmal, werden sie untereinander platziert.
@@ -103,7 +105,7 @@ Um Formulare mehrspaltig zu machen, müssen die Felder, die in einer Reihe sind,
 
 Um einen Button direkt neben einem Eingabefeld zu platzieren, kann folgendes genutzt werden:
 
-```
+```html
 <div class="form-group">
     <label for="pw">Passwort</label>
     <div class="input-group">
