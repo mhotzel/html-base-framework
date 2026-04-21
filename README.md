@@ -101,6 +101,27 @@ Um Formulare mehrspaltig zu machen, müssen die Felder, die in einer Reihe sind,
 </div>
 ```
 
+Um einen Button direkt neben einem Eingabefeld zu platzieren, kann folgendes genutzt werden:
+
+```
+<div class="form-group">
+    <label for="pw">Passwort</label>
+    <div class="input-group">
+        <input type="password" id="pw" placeholder="Passwort eingeben...">
+        <button type="button" class="btn btn-outline">Anzeigen</button>
+    </div>
+</div>
+
+<div class="form-group">
+    <label for="user">Benutzername</label>
+    <div class="input-group">
+        <input type="text" id="user" placeholder="z.B. Max Mustermann">
+        <button type="button" class="btn btn-primary">Prüfen</button>
+    </div>
+</div>
+```
+
+
 Die Standardbreite von Elementen ist 450px. Um die volle Breite nutzen zu können, kann die CSS-Klasse `full-width` beim Element gesetzt werden.
 
 ## 6. Mobile Ansicht
