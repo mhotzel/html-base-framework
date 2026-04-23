@@ -20,7 +20,7 @@ html, body {
     height: 100%;
     margin: 0;
     font-family: sans-serif;
-    overflow: hidden; 
+    overflow: hidden;
     /* Verhindert das Scrollen der gesamten Seite auf Desktop */
 }
 
@@ -171,6 +171,30 @@ nav ul li a.active {
     box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
 }
 
+/* --- Mobiles Hamburger-Menü: Basis-Styling ---
+   Browser-Standardpfeil (Marker) vor dem <summary> entfernen.
+   Das Desktop-Verhalten (ul immer sichtbar) und das Mobile-Verhalten
+   (Hamburger-Button) stehen unten in eigenen Media-Queries. */
+.mobile-menu > summary {
+    list-style: none;
+}
+
+.mobile-menu > summary::-webkit-details-marker {
+    display: none;
+}
+
+/* Desktop: Das <summary> (Hamburger-Button) wird ausgeblendet.
+   Dass <details> auf Desktop "immer offen" ist, regelt ein kleines
+   Script am Ende von layout.php, das das [open]-Attribut je nach
+   Viewport setzt. Rein per CSS ist das nicht zuverlässig möglich,
+   weil moderne Browser den Inhalt von <details> ohne [open] über
+   einen internen Shadow-DOM-Slot verstecken. */
+@media (min-width: 769px) {
+    nav .mobile-menu > summary {
+        display: none;
+    }
+}
+
 main {
     flex: 1;
     padding: 20px;
@@ -219,7 +243,8 @@ footer {
 
 /* Eine Sektion dient als Container für Text oder Elemente außerhalb von Cards */
 .section {
-    margin-bottom: 2.5rem; /* Gleicher oder etwas mehr Abstand nach unten wie Cards */
+    margin-bottom: 2.5rem;
+    /* Gleicher oder etwas mehr Abstand nach unten wie Cards */
     width: 100%;
     display: block;
 }
@@ -256,7 +281,8 @@ footer {
     padding: 20px;
     color: var(--text-main);
     line-height: 1.6;
-    flex: 1; /* <-- NEU: Sorgt dafür, dass dieser Bereich den restlichen Platz einnimmt in "card-grid" */
+    flex: 1;
+    /* <-- NEU: Sorgt dafür, dass dieser Bereich den restlichen Platz einnimmt in "card-grid" */
 }
 
 .card-footer {
@@ -291,7 +317,8 @@ footer {
     gap: 20px;
     /* Abstand zwischen den Karten */
     /* align-items: flex-start; Geändert wegen gleicher Kartenhöhe */
-    align-items: stretch; /* Bewirkt, dass alle Items in der Reihe gleich hoch werden */
+    align-items: stretch;
+    /* Bewirkt, dass alle Items in der Reihe gleich hoch werden */
     /* Verhindert, dass kleine Karten unnötig in die Länge gezogen werden */
     flex-wrap: wrap;
     /* Erlaubt den Umbruch auf dem Handy */
@@ -372,8 +399,7 @@ textarea {
     border-radius: 4px;
 }
 
-
-/* Stellt Input-Elemente mit einem Button in einer Zeile nebeneinander dar */
+/* Erweitert: Gilt für Select, Text, Number und Password innerhalb einer Gruppe */
 .input-group {
     display: flex;
     gap: 10px; 
@@ -427,6 +453,18 @@ Beispiel - HTML:
     font-size: 1rem;
 }
 
+.button-row {
+    display: grid;
+    grid-auto-columns: 1fr;
+    grid-auto-flow: column;
+    gap: 10px;
+    margin-top: 15px;
+}
+
+.button-row .btn {
+    width: auto;
+}
+
 .btn-submit:hover {
     background-color: var(--primary-hover);
 }
@@ -458,7 +496,7 @@ Beispiel - HTML:
 }
 
 .btn-secondary {
-    background-color: var(--bg-sidebar);
+    background-color: var(--bg-nav-item);
     color: var(--text-main);
 }
 
@@ -479,19 +517,6 @@ Beispiel - HTML:
 
 .btn+.btn {
     margin-left: 10px;
-}
-
-/* Buttons in einer button-row sind in einer Zeile und alle gleich breit */
-.button-row {
-    display: grid;
-    grid-auto-columns: 1fr;
-    grid-auto-flow: column;
-    gap: 10px;
-    margin-top: 15px;
-}
-
-.button-row button {
-    width: auto;
 }
 
 /* ==========================================================================
@@ -570,11 +595,6 @@ tbody tr:hover {
     color: var(--error-color);
 }
 
-.status-tag.outline {
-    background: var(--outline-bg);
-    color: var(--outline-color);
-}
-
 /* ==========================================================================
    7. RESPONSIVES DESIGN (SMARTPHONE)
    ========================================================================== */
@@ -604,17 +624,35 @@ tbody tr:hover {
 
     nav {
         width: 100%;
+        padding: 10px 15px;
         border-bottom: 1px solid var(--border-color);
     }
 
-    nav ul {
-        display: flex;
-        gap: 15px;
-        justify-content: center;
+    /* <summary> wird auf Mobile zum sichtbaren Hamburger-Button */
+    nav .mobile-menu > summary {
+        display: block;
+        cursor: pointer;
+        padding: 10px 15px;
+        background-color: var(--bg-nav-item);
+        color: var(--text-main);
+        border-radius: 4px;
+        font-size: 0.95rem;
+        font-weight: 600;
+        user-select: none;
     }
 
-    nav li {
-        margin-bottom: 0;
+    nav .mobile-menu > summary:hover {
+        background-color: var(--bg-nav-hover);
+    }
+
+    /* Offen: kleiner Abstand zwischen Button und Liste.
+       Auf/Zu-Logik erledigt das native <details>-Verhalten. */
+    nav .mobile-menu[open] > ul {
+        margin-top: 10px;
+    }
+
+    nav .mobile-menu[open] > ul li {
+        margin-bottom: 5px;
     }
 
     main {

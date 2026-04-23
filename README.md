@@ -139,3 +139,29 @@ In der style.css unter `@media (max-width: 768px)` sind folgende Regeln aktiv:
 - Das Logo im Header wird ausgeblendet (Platzsparend).
 - Buttons werden auf 100% Breite gestreckt (Touch-optimiert).
 - Der globale Scroll-Stopp wird aufgehoben.
+
+## 7. Menü
+
+Um ein Burger-Menu einzufügen ist folgendes notwendig:
+1. Einfügen eines NAV-Elements mit folgendem Aufbau:
+   ```html
+    <nav>
+        <details class="mobile-menu" open>
+        <summary>☰ Menü</summary>
+        <ul>
+            <li>Dummy-Eintrag 1</li>
+            <li>Dummy-Eintrag 2</li>
+            <li>Dummy-Eintrag 3</li>
+            <li>Dummy-Eintrag 4</li>
+        </ul>
+        </details>
+    </nav>
+   ```
+2. Einbinden der JavaScript-Datei `js/layout.js` in das HTML **NACH** dem Einbinden der CSS:
+    ```html
+    <script src="<?= urlFor('/js/layout.js'); ?>" defer></script>
+    ```
+
+
+
+
