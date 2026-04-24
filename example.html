@@ -7,6 +7,7 @@
     <title>Dorfladen Rahmen</title>
     <link rel="stylesheet" href="css/colorscheme-business.css">
     <link rel="stylesheet" href="css/style.css">
+    <script src="js/layout.js" defer></script>
 </head>
 
 <body>
@@ -37,11 +38,14 @@
 
         <div id="content-wrapper">
             <nav>
-                <ul>
-                    <li><a href="#" class="active">Startseite</a></li>
-                    <li><a href="#">Benutzer</a></li>
-                    <li><a href="#">Daten</a></li>
-                </ul>
+                <details class="mobile-menu" open>
+                    <summary>☰ Menü</summary>
+                    <ul>
+                        <li><a href="#" class="active">Startseite</a></li>
+                        <li><a href="#">Benutzer</a></li>
+                        <li><a href="#">Daten</a></li>
+                    </ul>
+                </details>
             </nav>
 
             <main>
