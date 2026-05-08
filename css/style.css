@@ -420,6 +420,19 @@ textarea {
     flex-shrink: 0; /* Verhindert, dass der Button zusammengedrückt wird */
 }
 
+fieldset {
+    border-radius: 5px;
+    padding: 5px;
+    border: 1px solid var(--border-color);
+}
+
+fieldset>legend {
+    padding: 3px;
+    font-weight: 600;
+    font-size: 0.9rem;
+    color: var(--text-label);
+}
+
 /*
 Beispiel - HTML:
 <div class="form-group">
