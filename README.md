@@ -48,7 +48,7 @@ Die Klasse `card-center` macht ebenfalls eine schmale Card, zentriert sie aber z
 
 Mit `section` gestylte Elemente können ebenso schmal gemacht oder zentriert werden, wenn sie als zweite Klasse `card-small` oder entsprechend `card-center` bekommen.
 
-- **B. Das Button-System**
+**B. Das Button-System**
 
 Wir unterscheiden zwischen dem großen Formular-Button und Aktions-Buttons:
 
@@ -62,7 +62,7 @@ Wir unterscheiden zwischen dem großen Formular-Button und Aktions-Buttons:
 
 - Sollen mehrere Buttons nebeneinander in einer Zeile sein und die gleiche Breite haben: `.button-row`
 
-- **C. Status-Meldungen (.status-box)**
+**C. Status-Meldungen (.status-box)**
 
 Für Rückmeldungen an den Nutzer:
 
