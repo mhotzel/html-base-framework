@@ -59,8 +59,9 @@ Wir unterscheiden zwischen dem großen Formular-Button und Aktions-Buttons:
 - `.btn-primary` (Dunkelblau)
 - `.btn-secondary` (Grau)
 - `.btn-outline` (Weiß mit grünem Rand)
-
 - Sollen mehrere Buttons nebeneinander in einer Zeile sein und die gleiche Breite haben: `.button-row`
+- Links können ebenfalls als Buttons formatiert werden.
+- Links in Tabellen, also innerhalb von `<td></td`, werden ohne Padding angezeigt.
 
 **C. Status-Meldungen (.status-box)**
 
